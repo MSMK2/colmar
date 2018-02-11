@@ -1,6 +1,6 @@
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #484848;
 }
 
@@ -26,6 +26,11 @@ h2 {
   margin: 1rem 0;
 }
 
+p {
+  margin: 8px 0;
+  line-height: 1.3;
+}
+
 header {
   height: 64px;
   background-color: white;
@@ -36,6 +41,11 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.header-spacing {
+  position: relative;
+  top: 64px;
 }
 
 .desktop-padding {
@@ -55,7 +65,7 @@ header .desktop {
 }
 
 .desktop-logo span {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   margin-left: 10px;
   color: black;
 }
@@ -104,8 +114,6 @@ header .mobile {
 /* Second Row Banner */
 
 .second-row {
-  position: relative;
-  top: 64px;
   display: flex;
   align-items: center;
   background-color: lightgray;
@@ -117,7 +125,7 @@ header .mobile {
   height: auto;
 }
 
-.second-row-call-to-action {
+.second-row .call-to-action {
   margin-right: 24px;
 }
 
@@ -130,20 +138,93 @@ button {
 }
 
 @media only screen and (max-width: 740px) {
-
   .second-row {
     flex-wrap: wrap;
   }
-
   .second-row img {
     width: 100%;
     margin: 0;
   }
-
-  .second-row-call-to-action {
+  .second-row .call-to-action {
     padding: 16px;
-    margin-right: 0;
+    margin: 32px 0;
   }
+  button {
+    background-color: gray;
+    font-weight: bold;
+  }
+}
 
+/* Third Row */
 
+.third-row {
+  display: flex;
+}
+
+.left-column {
+  background-color: pink;
+  padding: 32px 24px;
+  width: 60%;
+  display: inline-block;
+}
+
+.left-column img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.left-column h1 {
+  margin-bottom: 24px;
+}
+
+.right-column {
+  background-color: yellow;
+  width: 40%;
+}
+
+.right-column .highlight {
+  border: 1px solid gray;
+  border-right: none;
+  border-top: none;
+  padding: 16px 16px 14px;
+  display: flex;
+  align-items: center;
+}
+
+.right-column .highlight:hover {
+  background-color: lightgray;
+}
+
+.highlight ._image {
+  display: inline-block;
+  padding: 0;
+  width: 35%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.highlight ._image img {
+  height: auto;
+  width: 100%;
+}
+
+.highlight ._text {
+  display: inline-block;
+  width: 65%;
+}
+
+.highlight ._text h2 {
+  margin: 0;
+}
+
+.footnote {
+  font-size: 0.7rem;
+  margin-top: 16px;
+}
+
+a.footnote {
+  color: blue;
+  text-decoration: none;
 }
