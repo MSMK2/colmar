@@ -135,6 +135,7 @@ button {
   padding: 8px;
   color: white;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 740px) {
@@ -162,7 +163,6 @@ button {
 }
 
 .left-column {
-  background-color: pink;
   padding: 32px 24px;
   width: 60%;
   display: inline-block;
@@ -180,12 +180,11 @@ button {
 }
 
 .right-column {
-  background-color: yellow;
   width: 40%;
 }
 
 .right-column .highlight {
-  border: 1px solid gray;
+  border: 1px solid lightgray;
   border-right: none;
   border-top: none;
   padding: 16px 16px 14px;
@@ -209,6 +208,9 @@ button {
   height: auto;
   width: 100%;
 }
+.highlight ._image img.mobile {
+  display: none;
+}
 
 .highlight ._text {
   display: inline-block;
@@ -227,4 +229,42 @@ button {
 a.footnote {
   color: blue;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 740px) {
+  .third-row {
+    padding: 16px;
+  }
+
+  .left-column {
+    display: none;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+  .right-column .highlight {
+    padding: 0;
+    display: block;
+    border: none;
+    margin-bottom: 32px;
+  }
+
+  .highlight ._image {
+    width: 100%;
+  }
+
+  .highlight ._image img.mobile {
+    display: block;
+  }
+
+  .highlight ._image img.desktop {
+    display: none;
+  }
+
+  .highlight ._text {
+    padding: 16px;
+    width: 100%;
+  }
 }
