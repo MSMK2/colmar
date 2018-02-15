@@ -192,6 +192,11 @@ button {
   align-items: center;
 }
 
+.right-column .highlight:first-child {
+  border-top: 1px solid lightgray;
+  margin-top: 32px;
+}
+
 .right-column .highlight:hover {
   background-color: lightgray;
 }
@@ -265,6 +270,61 @@ a.footnote {
 
   .highlight ._text {
     padding: 16px;
-    width: 100%;
+    width: 96%;
   }
+}
+
+/* Fourth Row */
+
+.fourth-row {
+  width: 100%;
+  background-color: lightgray;
+}
+
+.fourth-row h1 {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.courses {
+  margin: 0 56px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.courses a.desktop {
+  margin: 0 16px;
+  width: 30%;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.courses a.mobile {
+  display: none;
+}
+
+.course ._image {
+  width: 100%;
+  height: auto;
+  margin-bottom: -3px;
+}
+
+.course ._image img {
+  width: 100%;
+  height: auto;
+}
+
+.course ._text {
+  padding: 16px 16px 24px;
+  background-color: white;
+}
+
+.course h2 {
+  margin: 0;
+}
+
+.course p:last-child {
+  margin-bottom: 0;
 }
