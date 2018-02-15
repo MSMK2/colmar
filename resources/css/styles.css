@@ -154,6 +154,11 @@ button {
     background-color: gray;
     font-weight: bold;
   }
+  button:hover {
+    background-color: lightblue;
+    border: 0.5px solid gray;
+    color: gray;
+  }
 }
 
 /* Third Row */
@@ -305,6 +310,10 @@ a.footnote {
   display: none;
 }
 
+.course {
+  box-shadow: 2px 2px 2px gray;
+}
+
 .course ._image {
   width: 100%;
   height: auto;
@@ -319,6 +328,7 @@ a.footnote {
 .course ._text {
   padding: 16px 16px 24px;
   background-color: white;
+  margin-bottom: 32px;
 }
 
 .course h2 {
@@ -327,4 +337,42 @@ a.footnote {
 
 .course p:last-child {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 740px) {
+  .fourth-row {
+    background-color: white;
+    border-top: 1px solid lightgray;
+  }
+
+  .courses a.desktop {
+    display: none;
+  }
+
+  .courses a.mobile {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .courses {
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .courses a.mobile {
+    padding: 16px 16px 13px;
+    background-color: lightgray;
+    margin-bottom: 8px;
+    border-bottom: 3px solid gray;
+  }
+  .courses a.mobile:hover {
+    background-color: lightblue;
+  }
+  .courses a.mobile h2 {
+    margin: 0;
+  }
 }
