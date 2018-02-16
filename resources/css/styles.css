@@ -17,6 +17,7 @@ body {
 h1 {
   font-size: 3.3rem;
   font-weight: 700;
+  padding: 32px 0;
 }
 
 h2 {
@@ -77,16 +78,18 @@ header .desktop {
 
 .desktop nav ul li {
   display: inline-block;
-  margin-left: 1rem;
+  margin-left: 11px;
 }
 
 li a {
   text-decoration: none;
   color: #484848;
+  padding: 5px;
 }
 
 li a:hover {
-  text-decoration: underline;
+  background-color: lightblue;
+  padding: 5px;
 }
 
 header .mobile {
@@ -129,6 +132,10 @@ header .mobile {
   margin-right: 24px;
 }
 
+.second-row h1 {
+  padding: 0;
+}
+
 button {
   width: 100%;
   background-color: #484848;
@@ -136,6 +143,12 @@ button {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: lightblue;
+  border: 0.5px solid gray;
+  color: #484848;
 }
 
 @media only screen and (max-width: 740px) {
@@ -153,11 +166,7 @@ button {
   button {
     background-color: gray;
     font-weight: bold;
-  }
-  button:hover {
-    background-color: lightblue;
-    border: 0.5px solid gray;
-    color: gray;
+    border: 0.5px solid #484848;
   }
 }
 
@@ -165,23 +174,24 @@ button {
 
 .third-row {
   display: flex;
+  padding: 32px 0;
+  margin-right: 0;
 }
 
 .left-column {
-  padding: 32px 24px;
   width: 60%;
   display: inline-block;
+  margin-right: 24px;
 }
 
 .left-column img {
   width: 100%;
   height: auto;
   position: relative;
-  margin-bottom: 32px;
 }
 
 .left-column h1 {
-  margin-bottom: 24px;
+  margin-bottom: -8px;
 }
 
 .right-column {
@@ -189,46 +199,49 @@ button {
 }
 
 .right-column .highlight {
-  border: 1px solid lightgray;
+  border: 0.5px solid lightgray;
   border-right: none;
-  border-top: none;
-  padding: 16px 16px 14px;
+  border-bottom: none;
   display: flex;
   align-items: center;
-}
-
-.right-column .highlight:first-child {
-  border-top: 1px solid lightgray;
-  margin-top: 32px;
+  color: inherit;
+  text-decoration: none;
+  padding: 16px 16px 14px;
 }
 
 .right-column .highlight:hover {
-  background-color: lightgray;
+  background-color: lightblue;
+  border: 0.5px solid lightblue;
+  border-right: none;
+  border-bottom: none;
+}
+
+.right-column .highlight:last-child {
+  border-bottom: 1px solid lightgray;
 }
 
 .highlight ._image {
-  display: inline-block;
-  padding: 0;
   width: 35%;
-  overflow: hidden;
   margin-right: 16px;
+  display: inline-block;
 }
 
 .highlight ._image img {
-  height: auto;
   width: 100%;
-}
-.highlight ._image img.mobile {
-  display: none;
+  height: auto;
 }
 
 .highlight ._text {
-  display: inline-block;
   width: 65%;
 }
 
-.highlight ._text h2 {
-  margin: 0;
+.highlight ._text h2,
+.highlight ._text p {
+  margin: 8px 0;
+}
+
+.highlight ._image img.mobile {
+  display: none;
 }
 
 .footnote {
@@ -236,17 +249,24 @@ button {
   margin-top: 16px;
 }
 
-a.footnote {
+.right-column .footnote {
   color: blue;
-  text-decoration: none;
+}
+
+.right-column .footnote:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 740px) {
-  .third-row {
-    padding: 16px;
+  .desktop-padding {
+    margin: 0;
   }
 
-  .left-column {
+  .third-row {
+    padding: 0;
+  }
+
+  .third-row .left-column {
     display: none;
   }
 
@@ -255,17 +275,20 @@ a.footnote {
   }
 
   .right-column .highlight {
-    padding: 0;
-    display: block;
     border: none;
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
   }
 
   .highlight ._image {
+    display: block;
     width: 100%;
+    margin-right: 0;
   }
 
   .highlight ._image img.mobile {
+    width: 100%;
     display: block;
   }
 
@@ -274,8 +297,8 @@ a.footnote {
   }
 
   .highlight ._text {
-    padding: 16px;
-    width: 96%;
+    width: 100%;
+    display: inline-block;
   }
 }
 
@@ -286,8 +309,8 @@ a.footnote {
   background-color: lightgray;
 }
 
-.fourth-row h1 {
-  padding: 32px 0;
+.fourth-row h1,
+.fifth-row h1 {
   text-align: center;
 }
 
@@ -311,7 +334,11 @@ a.footnote {
 }
 
 .course {
-  box-shadow: 2px 2px 2px gray;
+  box-shadow: 0 2px 6px gray;
+}
+
+.course:hover {
+  box-shadow: 0 6px 12px gray;
 }
 
 .course ._image {
@@ -372,7 +399,71 @@ a.footnote {
   .courses a.mobile:hover {
     background-color: lightblue;
   }
+  .courses a.mobile:last-child {
+    margin-bottom: 32px;
+  }
   .courses a.mobile h2 {
     margin: 0;
+  }
+}
+
+/* Fifth Row */
+
+.fifth-row .content {
+  padding-left: 24px;
+  padding-bottom: 32px;
+  display: flex;
+}
+
+.fifth-row .left-column h2 {
+  margin: 24px 0 8px;
+}
+
+@media only screen and (max-width: 740px) {
+  .fifth-row {
+    border-top: 1px solid lightgray;
+  }
+
+  .fifth-row .right-column {
+    display: none;
+  }
+
+  .fifth-row .left-column ._text {
+    display: none;
+  }
+
+  .fifth-row .content {
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .fifth-row .left-column {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+/* Footer */
+
+footer {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 740px) {
+  footer ul li {
+    display: none;
+  }
+  footer .mobile {
+    padding-left: 24px;
   }
 }
