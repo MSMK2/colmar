@@ -14,10 +14,15 @@ body {
   width: 100%;
 }
 
+.desktop-padding {
+  margin: 0 24px;
+}
+
 h1 {
   font-size: 3.3rem;
   font-weight: 700;
   padding: 32px 0;
+  color: #00b6c8;
 }
 
 h2 {
@@ -42,15 +47,12 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  box-shadow: 0px 4px 10px -2px rgba(130,130,130,0.5);
 }
 
 .header-spacing {
   position: relative;
   top: 64px;
-}
-
-.desktop-padding {
-  margin: 0 24px;
 }
 
 header .desktop {
@@ -68,7 +70,7 @@ header .desktop {
 .desktop-logo span {
   font-size: 1.7rem;
   margin-left: 10px;
-  color: black;
+  color: #00b6c8;
 }
 
 .desktop-logo img {
@@ -85,11 +87,12 @@ li a {
   text-decoration: none;
   color: #484848;
   padding: 5px;
+  transition: background-color 500ms;
 }
 
 li a:hover {
-  background-color: lightblue;
-  padding: 5px;
+  background-color: #00b6c847;
+  padding: 3px 5px;
 }
 
 header .mobile {
@@ -117,20 +120,23 @@ header .mobile {
 /* Second Row Banner */
 
 .second-row {
+  background-color: #eaeaea;
+}
+
+.second-row .content {
   display: flex;
   align-items: center;
-  background-color: lightgray;
 }
 
 .second-row img {
-  margin: 32px 24px;
+  margin: 32px 24px 32px 0;
   width: 60%;
   height: auto;
 }
 
-.second-row .call-to-action {
+/* .second-row .call-to-action {
   margin-right: 24px;
-}
+} */
 
 .second-row h1 {
   padding: 0;
@@ -143,12 +149,11 @@ button {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: background-color 500ms;
 }
 
 button:hover {
-  background-color: lightblue;
-  border: 0.5px solid gray;
-  color: #484848;
+  background-color: #00b6c8;
 }
 
 @media only screen and (max-width: 740px) {
@@ -166,7 +171,6 @@ button:hover {
   button {
     background-color: gray;
     font-weight: bold;
-    border: 0.5px solid #484848;
   }
 }
 
@@ -190,16 +194,12 @@ button:hover {
   position: relative;
 }
 
-.left-column h1 {
-  margin-bottom: -8px;
-}
-
 .right-column {
   width: 40%;
 }
 
 .right-column .highlight {
-  border: 0.5px solid lightgray;
+  border: 0.5px solid #eaeaea;
   border-right: none;
   border-bottom: none;
   display: flex;
@@ -207,17 +207,17 @@ button:hover {
   color: inherit;
   text-decoration: none;
   padding: 16px 16px 14px;
+  transition: background-color 500ms;
 }
 
 .right-column .highlight:hover {
-  background-color: lightblue;
-  border: 0.5px solid lightblue;
+  background-color: #00b6c847;
   border-right: none;
   border-bottom: none;
 }
 
 .right-column .highlight:last-child {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .highlight ._image {
@@ -235,6 +235,14 @@ button:hover {
   width: 65%;
 }
 
+.third-row h1 {
+  padding: 32px 0 24px;
+}
+
+.third-row p {
+  margin: 0;
+}
+
 .highlight ._text h2,
 .highlight ._text p {
   margin: 8px 0;
@@ -250,7 +258,8 @@ button:hover {
 }
 
 .right-column .footnote {
-  color: blue;
+  color: #00b6c8;
+  font-weight: bold;
 }
 
 .right-column .footnote:hover {
@@ -306,7 +315,7 @@ button:hover {
 
 .fourth-row {
   width: 100%;
-  background-color: lightgray;
+  background-color: #eaeaea;
 }
 
 .fourth-row h1,
@@ -335,10 +344,11 @@ button:hover {
 
 .course {
   box-shadow: 0 2px 6px gray;
+  transition: box-shadow 250ms;
 }
 
 .course:hover {
-  box-shadow: 0 6px 12px gray;
+  box-shadow: 0 6px 12px -2px gray;
 }
 
 .course ._image {
@@ -369,7 +379,7 @@ button:hover {
 @media only screen and (max-width: 740px) {
   .fourth-row {
     background-color: white;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #eaeaea;
   }
 
   .courses a.desktop {
@@ -392,12 +402,13 @@ button:hover {
 
   .courses a.mobile {
     padding: 16px 16px 13px;
-    background-color: lightgray;
+    background-color: #eaeaea;
     margin-bottom: 8px;
     border-bottom: 3px solid gray;
+    transition: background-color 500ms;
   }
   .courses a.mobile:hover {
-    background-color: lightblue;
+    background-color: #00b6c847;
   }
   .courses a.mobile:last-child {
     margin-bottom: 32px;
@@ -410,7 +421,6 @@ button:hover {
 /* Fifth Row */
 
 .fifth-row .content {
-  padding-left: 24px;
   padding-bottom: 32px;
   display: flex;
 }
@@ -419,9 +429,13 @@ button:hover {
   margin: 24px 0 8px;
 }
 
+.fifth-row .right-column {
+  margin-right: -24px;
+}
+
 @media only screen and (max-width: 740px) {
   .fifth-row {
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #eaeaea;
   }
 
   .fifth-row .right-column {
@@ -447,11 +461,14 @@ button:hover {
 /* Footer */
 
 footer {
-  border-top: 1px solid lightgray;
-  display: flex;
-  justify-content: space-between;
+  border-top: 1px solid #eaeaea;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+footer .content {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer ul li {
